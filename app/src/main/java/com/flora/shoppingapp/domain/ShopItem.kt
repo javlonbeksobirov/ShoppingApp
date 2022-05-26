@@ -1,9 +1,14 @@
 package com.flora.shoppingapp.domain
 
 data class ShopItem(
-    var name: String,
-    var price: String,
-    var id: Int,
-    var image: Int,
-    var count: Int
+    val name: String,
+    val price: String,
+    val image: Int,
+    val count: Int,
+    var id: Int = UNDEFINED_ID,
 )
+{
+    companion object{
+        const val UNDEFINED_ID = -1
+    }
+}
